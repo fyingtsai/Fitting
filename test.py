@@ -5,9 +5,10 @@ from ROOT import RooRealVar, RooArgSet, RooLinkedList,RooFit
 from ROOT import TCanvas, TAxis, TH1F, TFile, gPad
 from ROOT import RooGaussian
 from ROOT import *
+
 def main():
     # Mjj0 of TT MC Bkg
-    f1 = TFile("AnalysisHistograms_V23/Merged_TT_TuneCUETP8M1_13TeV-powheg-pythia8-runallAnalysis.root")
+    f1 = TFile("Merged_TT_TuneCUETP8M1_13TeV-powheg-pythia8-runallAnalysis.root")
     h_Mjj = f1.Get("histfacFatJet_ZLight/h_Mjj0")
     h_Mjj.GetXaxis().SetRangeUser(0,300)
     var_mean = h_Mjj.GetMean()
